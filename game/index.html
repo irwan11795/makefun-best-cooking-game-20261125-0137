@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Ladle — a tiny hearth kitchen</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #2b1a12;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+  }
+  #wrap {
+    width: min(1280px, 100vw);
+    aspect-ratio: 1280 / 800;
+    position: relative;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #e8cfa8;
+    border-radius: 6px;
+  }
+  #help {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    color: #fff6e3;
+    opacity: 0.65;
+    font-size: 12px;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="help">Ember Ladle — WASD/arrows + E, or click a station · P pause · R restart · M mute</div>
+  <noscript><p style="color:#fff6e3">Ember Ladle needs JavaScript to cook.</p></noscript>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
